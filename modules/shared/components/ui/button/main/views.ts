@@ -1,26 +1,27 @@
 import styled from 'styled-components';
 
-interface Props {
-  type: string | undefined;
+export interface ButtonProps {
+  withoutBorder?: boolean;
+  type?: string;
 }
 
-export const WButton = styled.div`
-  max-height: 100px;
-  max-width: 100px;
-  padding: 8px;
+export const WButton = styled.div<ButtonProps>`
+  padding: 6px;
+  margin: 0 4px;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 10px;
   text-align: center;
-  border: 1px solid ${({ type }: Props) => (type === 'delete' ? '#ff453a' : '#34c759')};
   transition: all ease 0.2s;
+
+  border: 1px solid ${({ type, theme }) => (type === 'delete' ? theme.colors.red400 : theme.colors.blue350)};
+
   &:hover {
-    background: ${({ type }: Props) => (type === 'delete' ? '#ff453a' : '#34c759')};
-    border: 1px solid ${({ type }: Props) => (type === 'delete' ? '#ff453a' : '#34c759')};
-    //transition: all ease 0.2s;
     color: white !important;
+
+    background: ${({ type, theme }) => (type === 'delete' ? theme.colors.red400 : theme.colors.blue350)};
+    border: 1px solid ${({ type, theme }) => (type === 'delete' ? theme.colors.red400 : theme.colors.blue350)};
   }
-`;
-export const BWrapper = styled.div`
+
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Chrome/Safari/Opera */
   -moz-user-select: none; /* Firefox */

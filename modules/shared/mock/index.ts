@@ -1,48 +1,62 @@
+export type Categories = 'PHONES' | 'NOTEBOOKS' | 'WATCHES' | 'ALL';
+
 export interface Product {
   name: string;
   id: number;
   price: number;
   img: string;
   descriptions: string;
+  category: Categories;
 }
 
 export const products: Product[] = [
   {
     id: 1,
-    name: 'Washer',
-    price: 100,
-    img:
-      'https://cdn.comfy.ua/media/catalog/product/cache/4/image/1440x1080/62defc7f46f3fbfc8afcd112227d1181/f/2/f2j3ws2w_04_right.jpg',
+    name: 'Apple iPhone 11 Pro Max 256GB Gold',
+    price: 1100,
+    category: 'PHONES',
+    img: 'https://www.webphone.store/wp-content/uploads/2020/04/apple-iphone-11-pro-64gb-oro.gif',
     descriptions:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus culpa dicta doloribus laborum magnam nisi, porro possimus quia quod? A accusantium deleniti doloribus est maxime minus, obcaecati saepe sapiente sit.'
   },
   {
     id: 2,
-    name: 'Washer',
-    price: 300,
-    img:
-      'https://cdn.comfy.ua/media/catalog/product/cache/4/image/1440x1080/62defc7f46f3fbfc8afcd112227d1181/d/_/d_z01.jpg',
+    name: 'Apple iPhone 12 128GB Blue',
+    category: 'PHONES',
+    price: 720,
+    img: 'https://www.webphone.store/wp-content/uploads/2020/10/apple-iphone-12-128gb-blau.gif',
     descriptions: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, totam.'
   },
   {
     id: 3,
-    name: 'Fridge',
-    price: 1200,
-    img: 'https://hotline.ua/img/tx/238/238778856_s265.jpg',
+    name: 'Apple Watch SE Black 40mm Sport Band Black',
+    price: 299,
+    category: 'WATCHES',
+    img: 'https://www.webphone.store/wp-content/uploads/2020/10/apple-watch-se-space-gray-44mm-sport-band-black.gif',
     descriptions: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, totam.'
   },
   {
     id: 4,
-    name: 'Fridge',
-    price: 1200,
-    img: 'https://hotline.ua/img/tx/238/238782043_s265.jpg',
+    name: 'Apple Watch SE Gold 40mm Sport Band Pink Sand',
+    price: 314,
+    category: 'WATCHES',
+    img: 'https://www.webphone.store/wp-content/uploads/2020/10/apple-watch-se-silver-sport-band-pink-sand.gif',
     descriptions: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, totam.'
   },
   {
     id: 5,
-    name: 'Vacuum cleaner',
-    price: 400,
-    img: 'https://polaris.company/upload/iblock/657/151_01_1.jpg',
+    name: 'A laptop Apple MacBook Pro 14” Space Gray 2021 (MKGP3)',
+    price: 1700,
+    category: 'NOTEBOOKS',
+    img: 'https://media.didi.ua/images/catalog/product_gallery/thumb/ZMQCdM8RKRFF.jpg',
+    descriptions: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, totam.'
+  },
+  {
+    id: 6,
+    name: 'A laptop Apple MacBook Pro 13" Space Gray Late 2020 (MYD82)',
+    price: 1220,
+    category: 'NOTEBOOKS',
+    img: 'https://media.didi.ua/images/catalog/product_gallery/thumb/svq6Jf7LF0DH.jpg',
     descriptions: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, totam.'
   }
 ];

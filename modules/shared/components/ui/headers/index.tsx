@@ -1,19 +1,34 @@
 import React, { useContext } from 'react';
-import { Logo } from '@md-ui/logos/main';
-//context
+// hooks
+import { useRouter } from 'next/router';
+// context
 import { CartContext } from '@md-modules/shared/providers/cart-context';
-//views
-import { LWrapper, WHeader, WCart } from './views';
+// components
+import Menu from '@md-ui/headers/components/menu';
+import Button from '@md-ui/button/main';
+// views
+import { WHeader, WCart, SearchInput, Logo, SearchWrapper, Wrapper } from './views';
 
 const Header = () => {
+  const { push } = useRouter();
   const { countItemCart, setActiveCart } = useContext(CartContext);
+
+  const goToHomePage = () => push('/');
+
   return (
-    <WHeader>
-      <LWrapper>
-        <Logo />
-      </LWrapper>
-      <WCart onClick={() => setActiveCart(true)}>Cart: {countItemCart}</WCart>
-    </WHeader>
+    <Wrapper>
+      <WHeader>
+        <Logo onClick={goToHomePage}>Shop</Logo>
+
+        <SearchWrapper>
+          <SearchInput placeholder='Search' />
+          <Button title='Search' />
+        </SearchWrapper>
+
+        <WCart onClick={() => setActiveCart(true)}>Cart: {countItemCart}</WCart>
+      </WHeader>
+      <Menu />
+    </Wrapper>
   );
 };
 

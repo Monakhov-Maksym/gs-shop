@@ -1,13 +1,10 @@
-//views
 import { MainLayout } from '@md-modules/shared/layouts/main';
-import DetailsContainer from '@md-modules/appliances/product';
+import DetailsContainer from '@md-modules/shop/product';
 
-const DetailsPage = () => {
-  return (
-    <MainLayout>
-      <DetailsContainer />
-    </MainLayout>
-  );
-};
+const DetailsPage = () => (
+  <MainLayout>
+    <DetailsContainer />
+  </MainLayout>
+);
 
 export default DetailsPage;
