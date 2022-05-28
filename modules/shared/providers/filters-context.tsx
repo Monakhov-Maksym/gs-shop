@@ -3,14 +3,15 @@ import React from 'react';
 import { Categories } from '@md-modules/shared/mock';
 
 export interface Filters {
-  search: string;
-  onlyNew: boolean;
-  onlyStock: boolean;
-  category: Categories;
+  search?: string;
+  onlyNew?: boolean;
+  onlyStock?: boolean;
+  category?: Categories;
 }
 
 interface Context {
   filters: Filters;
+  onFilter: (filters: Filters) => void;
 }
 
 export const FiltersContext = React.createContext<Context>({
@@ -19,10 +20,11 @@ export const FiltersContext = React.createContext<Context>({
     onlyNew: false,
     onlyStock: false,
     category: 'ALL'
-  }
+  },
+  onFilter: () => {}
 });
 
-const CartContextProvider: React.FC = ({ children }) => {
+const FiltersContextProvider: React.FC = ({ children }) => {
   const [filters, setFilters] = React.useState<Filters>({
     search: '',
     onlyNew: false,
@@ -30,7 +32,9 @@ const CartContextProvider: React.FC = ({ children }) => {
     category: 'ALL'
   });
 
-  return <FiltersContext.Provider value={{ filters }}>{children}</FiltersContext.Provider>;
+  const onFilter = (filters: Filters) => setFilters((prevState) => ({ ...prevState, ...filters }));
+
+  return <FiltersContext.Provider value={{ filters, onFilter }}>{children}</FiltersContext.Provider>;
 };
 
-export default CartContextProvider;
+export default FiltersContextProvider;

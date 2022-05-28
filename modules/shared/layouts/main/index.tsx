@@ -4,16 +4,19 @@ import Header from '@md-ui/headers';
 import { ChildrenWrapper, Wrapper } from './views';
 import CartContextProvider from '@md-modules/shared/providers/cart-context';
 import CartContainer from '@md-modules/shop/cart';
+import FiltersContextProvider from '@md-modules/shared/providers/filters-context';
 
 const MainLayout: React.FC = ({ children }) => (
   <Wrapper>
-    <CartContextProvider>
-      <Header />
+    <FiltersContextProvider>
+      <CartContextProvider>
+        <Header />
 
-      <ChildrenWrapper>{children}</ChildrenWrapper>
+        <ChildrenWrapper>{children}</ChildrenWrapper>
 
-      <CartContainer />
-    </CartContextProvider>
+        <CartContainer />
+      </CartContextProvider>
+    </FiltersContextProvider>
   </Wrapper>
 );
 

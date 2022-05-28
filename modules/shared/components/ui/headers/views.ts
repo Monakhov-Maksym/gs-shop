@@ -19,12 +19,6 @@ export const WHeader = styled.div`
   background: ${({ theme }) => theme.colors.blue600};
 `;
 
-export const SearchWrapper = styled.div`
-  width: 100%;
-
-  ${({ theme }) => theme.templates.centerContent}
-`;
-
 export const Logo = styled.h2`
   margin: 0 20px 0 0;
   cursor: pointer;

@@ -21,9 +21,9 @@ const ProductsBLContextProvider: React.FC = ({ children }) => {
       return [];
     }
     return products;
-  }, [typeof products === 'undefined']);
+  }, [products]);
 
-  const addToCart = (id: number | undefined) => {
+  const addToCart = (id?: number) => {
     const product = productsList.find((e) => e.id === id) as Product;
 
     addProductToCart(product);

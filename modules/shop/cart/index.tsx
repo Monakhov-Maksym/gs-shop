@@ -5,14 +5,9 @@ import CardForCart from '@md-modules/shop/cart/components/card';
 import { CartContext } from '@md-modules/shared/providers/cart-context';
 
 const CartContainer = () => {
-  const {
-    activeCart,
-    setActiveCart,
-    cartProducts,
-    deleteProductFromCart,
-    countItemCart,
-    totalAmountItemCart
-  } = useContext(CartContext);
+  const { activeCart, setActiveCart, cartProducts, deleteProductFromCart, totalAmountItemCart } = useContext(
+    CartContext
+  );
 
   return (
     <Cart activeCart={activeCart} setActiveCart={setActiveCart} totalAmountItemCart={totalAmountItemCart}>

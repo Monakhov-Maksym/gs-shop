@@ -1,6 +1,6 @@
 import { Product } from '@md-modules/shared/mock';
 //hooks
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useLocalStorage } from '@md-utils/localstorage';
 //context
 interface Context {
@@ -33,8 +33,8 @@ const CartContextProvider: React.FC = ({ children }) => {
 
   //update local state
   const setInCart = () => {
-    setCartProducts(getProducts())
-  }
+    setCartProducts(getProducts());
+  };
 
   //Effect(s)
   useEffect(() => {

@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 export interface ButtonProps {
-  withoutBorder?: boolean;
   type?: string;
+  isActive: boolean;
+  withoutBorder?: boolean;
 }
 
 export const WButton = styled.div<ButtonProps>`
@@ -14,6 +15,8 @@ export const WButton = styled.div<ButtonProps>`
   transition: all ease 0.2s;
 
   border: 1px solid ${({ type, theme }) => (type === 'delete' ? theme.colors.red400 : theme.colors.blue350)};
+
+  background: ${({ isActive, theme }) => isActive && theme.colors.blue350};
 
   &:hover {
     color: white !important;

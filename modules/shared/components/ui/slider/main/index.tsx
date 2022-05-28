@@ -29,6 +29,10 @@ const Slider: React.FC<Props> = ({ items, currentSlide = 0 }) => {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
 
+  if (!length) {
+    return null;
+  }
+
   return (
     <SliderWrapper>
       <ArrowButton src='/static/images/left-arrow.svg' onClick={prevSlide} />

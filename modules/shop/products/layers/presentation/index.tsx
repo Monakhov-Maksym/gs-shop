@@ -13,20 +13,18 @@ const ProductsPresentation = () => {
   const { productsList } = React.useContext(ProductsBLContext);
   const { isLoading } = React.useContext(ProductsAPIContext);
 
-  const productsListComponents = productsList.map((element) => (
-    <ProductsCard key={element.id} img={element.img} name={element.name} price={element.price} id={element.id} />
-  ));
+  const productsListComponents = productsList.map((element) => <ProductsCard key={element.id} {...element} />);
 
   return (
-    <Wrapper>
-      <ContentLoader isLoading={isLoading}>
+    <ContentLoader isLoading={isLoading}>
+      <Wrapper>
         <SliderWrapper>
           <Slider items={productsListComponents} />
         </SliderWrapper>
 
         <ProductsContainer>{productsListComponents}</ProductsContainer>
-      </ContentLoader>
-    </Wrapper>
+      </Wrapper>
+    </ContentLoader>
   );
 };
 
