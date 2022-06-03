@@ -5,7 +5,6 @@ import { ButtonProps, WButton } from './views';
 interface Props extends ButtonProps {
   title: string;
   onClick?: any;
-  isActive?: boolean;
 }
 
 const Button: React.FC<Props> = ({ title, type, isActive, onClick }) => (
