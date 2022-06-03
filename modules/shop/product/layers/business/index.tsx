@@ -16,6 +16,7 @@ const ProductBLContext = React.createContext<Context>({
 const ProductBLContextProvider: React.FC = ({ children }) => {
   //api call
   const { product } = useContext(ProductAPIContext);
+  // @ts-ignore
   const productInfo = useMemo<Product[]>(() => {
     if (!product) {
       return [];
@@ -24,6 +25,7 @@ const ProductBLContextProvider: React.FC = ({ children }) => {
       {
         id: product.id,
         name: product.name,
+        category: product.category,
         price: product.price,
         img: product.img,
         descriptions: product.descriptions
