@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export interface ButtonProps {
   type?: string;
-  isActive: boolean;
+  isActive?: boolean;
   withoutBorder?: boolean;
 }
 
