@@ -31,7 +31,6 @@ const Menu: React.FC<Props> = ({ onSelectCategory, onOnlyStock, onOnlyNew, filte
       <Select onChange={onSelect} options={OPTIONS} styles={getSelectStyles()} defaultValue={OPTIONS[0]} />
       <Button isActive={filters.onlyNew} title='New' onClick={onOnlyNew} />
       <Button isActive={filters.onlyStock} title='Stock' onClick={onOnlyStock} />
-      <Button title='About us' />
     </WHeader>
   );
 };
