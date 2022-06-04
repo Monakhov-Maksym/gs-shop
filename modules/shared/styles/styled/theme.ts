@@ -45,7 +45,10 @@ export const colors = {
   red100: '#ffe5d3',
   red200: '#FFCCCC',
   red300: '#eb5757',
+  red350: '#ffa886',
   red400: '#ff3a29',
+  red500: '#ff7658',
+  red600: '#c6452d',
   // pink
   pink100: '#FFDEF0',
   pink400: '#FE008B',
