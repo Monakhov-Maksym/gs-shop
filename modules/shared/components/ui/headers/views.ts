@@ -16,7 +16,7 @@ export const WHeader = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  background: ${({ theme }) => theme.colors.red600};
+  background: ${({ theme }) => theme.colors.green400};
 `;
 
 export const Logo = styled.h2`

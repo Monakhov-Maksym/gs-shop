@@ -26,7 +26,7 @@ const Header = () => {
   return (
     <Wrapper>
       <WHeader>
-        <Logo onClick={goToHomePage}>GS Shop</Logo>
+        <Logo onClick={goToHomePage}>Anastasia Shop</Logo>
 
         <SearchInput onChange={onSearch} placeholder='Search' />
 

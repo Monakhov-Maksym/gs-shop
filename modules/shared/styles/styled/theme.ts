@@ -19,6 +19,7 @@ export const colors = {
   orange400: '#FF8540',
   // green
   green100: '#e2fbd7',
+  green200: '#6fe86a',
   green400: '#34b53a',
   green600: '#00AEAE',
   // purple
