@@ -23,7 +23,7 @@ const ProductsCard: React.FC<Props> = ({ img, name, price, id }) => {
 
   return (
     <Wrapper>
-      <PreviewPhoto onClick={onClickDetails} src={img} alt='img' />
+      <PreviewPhoto onClick={onClickDetails} src={img as string} alt='img' />
 
       <DWrapper>
         <Title>

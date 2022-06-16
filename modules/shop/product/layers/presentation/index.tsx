@@ -18,7 +18,7 @@ const DetailsPresentation = () => {
           img={element.img}
           name={element.name}
           price={element.price}
-          id={element.id}
+          id={element.id as number}
         />
       ))}
     </ContentLoader>
