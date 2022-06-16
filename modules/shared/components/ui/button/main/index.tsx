@@ -6,7 +6,6 @@ interface Props extends ButtonProps {
   title: string;
   onClick?: any;
 }
-
 const Button: React.FC<Props> = ({ title, type, isActive, onClick }) => (
   <WButton isActive={!!isActive} onClick={onClick} type={type}>
     {title}
