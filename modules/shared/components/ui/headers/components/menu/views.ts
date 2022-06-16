@@ -11,7 +11,7 @@ export const WHeader = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  background: ${({ theme }) => theme.colors.green200};
+  background: ${({ theme }) => theme.colors.blue400};
 `;
 
 export const getSelectStyles = (): StylesConfig<OptionType, any> => {

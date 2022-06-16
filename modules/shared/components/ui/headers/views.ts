@@ -16,7 +16,7 @@ export const WHeader = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  background: ${({ theme }) => theme.colors.green400};
+  background: ${({ theme }) => theme.colors.blue600};
 `;
 
 export const Image = styled.img`

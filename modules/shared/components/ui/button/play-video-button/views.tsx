@@ -7,8 +7,8 @@ export const Icon = styled.img`
 `;
 
 export const IconWrapper = styled.div<{ isPlayerLoading: boolean }>`
-  bottom: 12px;
-  width: 100%;
+  bottom: 196px;
+  width: 800px;
   padding: 10px 0;
   position: absolute;
   border-radius: 0 0 26px 26px;

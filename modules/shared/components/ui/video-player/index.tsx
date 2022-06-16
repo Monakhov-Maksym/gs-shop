@@ -42,9 +42,9 @@ const SimpleVideoPlayer: React.FC<ISimpleVideoPlayer> = ({ video, onEnded, autop
     <>
       <ReactPlayer
         url={video}
-        width='100%'
+        width='800px'
         playsinline
-        height='100%'
+        height='800px'
         playing={isPlayingVideo}
         onReady={onReadyPlayer}
         onEnded={onEndVideo}

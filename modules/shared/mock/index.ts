@@ -1,4 +1,4 @@
-export type Categories = 'PHONES' | 'NOTEBOOKS' | 'CAMERAS' | 'ALL';
+export type Categories = 'PHONES' | 'NOTEBOOKS' | 'WATCHES' | 'ALL';
 
 export interface Product {
   name: string;
@@ -14,12 +14,12 @@ export interface Product {
 export const products: Product[] = [
   {
     id: 1,
-    price: 257,
+    price: 1100,
     isNew: false,
     isStock: true,
     category: 'PHONES',
-    name: 'Xiaomi Redmi Note 11 4/128 Gr. Gray(2201117TY)',
-    img: 'https://media.didi.ua/images/catalog/product_gallery/thumb/aX6z5ctsW0yZ@2x.jpg',
+    name: 'Apple iPhone 11 Pro Max 256GB Gold',
+    img: 'https://www.webphone.store/wp-content/uploads/2020/04/apple-iphone-11-pro-64gb-oro.gif',
     descriptions:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus culpa dicta doloribus laborum magnam nisi, porro possimus quia quod? A accusantium deleniti doloribus est maxime minus, obcaecati saepe sapiente sit.'
   },
@@ -27,65 +27,50 @@ export const products: Product[] = [
     id: 2,
     isNew: true,
     isStock: false,
-    name: 'OnePlus 9 12/256GB Winter Mist',
+    name: 'Apple iPhone 12 128GB Blue',
     category: 'PHONES',
-    price: 599,
-    img: 'https://media.didi.ua/images/catalog/product_gallery/thumb/xb10ALrKReqq@2x.jpg',
+    price: 720,
+    img: 'https://www.webphone.store/wp-content/uploads/2020/10/apple-iphone-12-128gb-blau.gif',
     descriptions: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, totam.'
   },
   {
     id: 3,
     isNew: false,
     isStock: false,
-    name: 'Sony DSC-WX500',
-    price: 485,
-    category: 'CAMERAS',
-    img:
-      'https://i.allo.ua/media/catalog/product/cache/3/image/524x494/602f0fa2c1f0d1ba5e241f914e856ff9/e/r/er59uw5kcc1.jpg',
+    name: 'Apple Watch SE Black 40mm Sport Band Black',
+    price: 299,
+    category: 'WATCHES',
+    img: 'https://www.webphone.store/wp-content/uploads/2020/10/apple-watch-se-space-gray-44mm-sport-band-black.gif',
     descriptions: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, totam.'
   },
   {
     id: 4,
     isNew: false,
     isStock: true,
-    name: 'Sony DSC-H300 Black',
-    price: 457,
-    category: 'CAMERAS',
-    img:
-      'https://i.allo.ua/media/catalog/product/cache/3/image/524x494/602f0fa2c1f0d1ba5e241f914e856ff9/import/205738218678863.jpg',
+    name: 'Apple Watch SE Gold 40mm Sport Band Pink Sand',
+    price: 314,
+    category: 'WATCHES',
+    img: 'https://www.webphone.store/wp-content/uploads/2020/10/apple-watch-se-silver-sport-band-pink-sand.gif',
     descriptions: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, totam.'
   },
   {
     id: 5,
     isNew: true,
     isStock: true,
-    name: 'Lenovo V17 G2 (82NX00DRRA) Iron Grey',
-    price: 457,
+    name: 'A laptop Apple MacBook Pro 14” Space Gray 2021 (MKGP3)',
+    price: 1700,
     category: 'NOTEBOOKS',
-    img:
-      'https://i.allo.ua/media/catalog/product/cache/3/image/524x494/602f0fa2c1f0d1ba5e241f914e856ff9/import/229779029719407.jpg',
+    img: 'https://media.didi.ua/images/catalog/product_gallery/thumb/ZMQCdM8RKRFF.jpg',
     descriptions: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, totam.'
   },
   {
     id: 6,
     isNew: false,
     isStock: false,
-    name: 'Ноутбук Lenovo V15 (82C500NRRA)',
-    price: 542,
+    name: 'A laptop Apple MacBook Pro 13" Space Gray Late 2020 (MYD82)',
+    price: 1220,
     category: 'NOTEBOOKS',
-    img:
-      'https://i.allo.ua/media/catalog/product/cache/3/image/524x494/602f0fa2c1f0d1ba5e241f914e856ff9/f/i/file_53.jpeg',
-    descriptions: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, totam.'
-  },
-  {
-    id: 7,
-    isNew: true,
-    isStock: false,
-    name: 'Lenovo IdeaPad Gaming 3-15IMH05 (81Y400ERRA)',
-    price: 1057,
-    category: 'NOTEBOOKS',
-    img:
-      'https://i.allo.ua/media/catalog/product/cache/3/image/524x494/602f0fa2c1f0d1ba5e241f914e856ff9/n/x/nxn_result_58.jpg',
+    img: 'https://media.didi.ua/images/catalog/product_gallery/thumb/svq6Jf7LF0DH.jpg',
     descriptions: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, totam.'
   }
 ];
