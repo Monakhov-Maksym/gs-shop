@@ -14,15 +14,15 @@ export const WButton = styled.div<ButtonProps>`
   text-align: center;
   transition: all ease 0.2s;
 
-  border: 1px solid ${({ type, theme }) => (type === 'delete' ? theme.colors.red400 : theme.colors.blue350)};
+  border: 1px solid ${({ type, theme }) => (type === 'delete' ? theme.colors.red400 : theme.colors.red350)};
 
-  background: ${({ isActive, theme }) => isActive && theme.colors.blue350};
+  background: ${({ isActive, theme }) => isActive && theme.colors.red350};
 
   &:hover {
     color: white !important;
 
-    background: ${({ type, theme }) => (type === 'delete' ? theme.colors.red400 : theme.colors.blue350)};
-    border: 1px solid ${({ type, theme }) => (type === 'delete' ? theme.colors.red400 : theme.colors.blue350)};
+    background: ${({ type, theme }) => (type === 'delete' ? theme.colors.red400 : theme.colors.red350)};
+    border: 1px solid ${({ type, theme }) => (type === 'delete' ? theme.colors.red400 : theme.colors.red350)};
   }
 
   -webkit-touch-callout: none; /* iOS Safari */

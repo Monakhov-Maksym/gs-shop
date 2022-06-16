@@ -20,7 +20,7 @@ const ProductsPresentation = () => {
   return (
     <ContentLoader isLoading={isLoading}>
       <Wrapper>
-        <SimpleVideoPlayer video='https://c1.poddev.xyz/companies/00u4eau73miMyxgBI5d7/video/1653415695134-ezyk1qj22tr391wp5GNj0F4A43IlMXw6MCZOGCpXfVk2ZYQzEZ' />
+        <SimpleVideoPlayer video='https://youtu.be/jO2F4VIqgnY' />
 
         <SliderWrapper>
           <Slider items={productsListComponents} />

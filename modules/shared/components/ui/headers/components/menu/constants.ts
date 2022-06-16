@@ -9,5 +9,5 @@ export const OPTIONS: OptionType[] = [
   { label: 'All', value: 'ALL' },
   { label: 'Phones', value: 'PHONES' },
   { label: 'Notebooks', value: 'NOTEBOOKS' },
-  { label: 'Watches', value: 'WATCHES' }
+  { label: 'Cameras', value: 'CAMERAS' }
 ];
