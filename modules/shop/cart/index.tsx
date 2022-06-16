@@ -9,10 +9,10 @@ const CartContainer = () => {
     CartContext
   );
 
-  // @ts-ignore
   return (
     <Cart activeCart={activeCart} setActiveCart={setActiveCart} totalAmountItemCart={totalAmountItemCart}>
       {cartProducts.map((element) => (
+        // @ts-ignore
         <CardForCart deleteProductFromCart={deleteProductFromCart} key={element.id} {...element} />
       ))}
     </Cart>
