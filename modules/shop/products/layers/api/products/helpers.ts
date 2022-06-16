@@ -16,8 +16,8 @@ export const getFilteredItems = (items: Product[], filters: Filters) => {
     case 'PHONES':
       filteredItems = filteredItems.filter((item) => item.category === 'PHONES');
       break;
-    case 'CAMERAS':
-      filteredItems = filteredItems.filter((item) => item.category === 'CAMERAS');
+    case 'WATCHES':
+      filteredItems = filteredItems.filter((item) => item.category === 'WATCHES');
       break;
     case 'NOTEBOOKS':
       filteredItems = filteredItems.filter((item) => item.category === 'NOTEBOOKS');
