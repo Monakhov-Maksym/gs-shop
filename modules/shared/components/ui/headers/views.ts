@@ -19,6 +19,12 @@ export const WHeader = styled.div`
   background: ${({ theme }) => theme.colors.green400};
 `;
 
+export const Image = styled.img`
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+`;
+
 export const Logo = styled.h2`
   margin: 0 20px 0 0;
   cursor: pointer;

@@ -10,13 +10,16 @@ import { Categories } from '@md-modules/shared/mock';
 import Button from '@md-ui/button/main';
 import Menu from '@md-ui/headers/components/menu';
 // views
-import { WHeader, WCart, SearchInput, Logo, Wrapper } from './views';
+import { WHeader, WCart, SearchInput, Logo, Wrapper, Image } from './views';
 // utils
 import { cookiesManager } from '@md-utils/cookies';
 
 interface Props {
   hideSignInButton?: boolean;
 }
+
+const FACEBOOK_LINK = 'https://www.facebook.com/';
+const INSTAGRAM_LINK = 'https://www.instagram.com/';
 
 const Header: React.FC<Props> = ({ hideSignInButton }) => {
   const { push } = useRouter();
@@ -38,12 +41,17 @@ const Header: React.FC<Props> = ({ hideSignInButton }) => {
     removeToken();
   };
 
+  const onClickLink = (link: string) => () => window.open(link);
+
   return (
     <Wrapper>
       <WHeader>
         <Logo onClick={goToHomePage}>Anastasia Shop</Logo>
 
         <SearchInput onChange={onSearch} placeholder='Search' />
+
+        <Image src='/static/images/instagram.png' onClick={onClickLink(INSTAGRAM_LINK)} />
+        <Image src='/static/images/facebook.png' onClick={onClickLink(FACEBOOK_LINK)} />
 
         <WCart onClick={() => setActiveCart(true)}>Cart: {countItemCart}</WCart>
 
