@@ -34,7 +34,6 @@ const SimpleVideoPlayer: React.FC<ISimpleVideoPlayer> = ({ video, onEnded, autop
   const onClickPlayVideo = () => {
     setIsPlaying(!isPlayingVideo);
   };
-
   React.useEffect(() => {
     return () => setIsPlaying(false);
   }, []);
