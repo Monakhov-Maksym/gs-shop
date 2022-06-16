@@ -1,9 +1,11 @@
 import React from 'react';
+// hooks
 import { useRouter } from 'next/router';
+import { useLocalStorage } from '@md-utils/localstorage';
 //query
 import { useQuery } from '@md-utils/mock/query';
 //mock
-import { products, Product } from '@md-modules/shared/mock';
+import { Product } from '@md-modules/shared/mock';
 
 interface Context {
   product: Product | undefined;
@@ -18,8 +20,9 @@ const ProductAPIContext = React.createContext<Context>({
 const ProductAPIContextProvider: React.FC = ({ children }) => {
   // make api call here
   const router = useRouter();
+  const { getTrips } = useLocalStorage<Product>();
   const { id } = router.query;
-  const { data, loading } = useQuery(products.find((e) => e.id.toString() == id));
+  const { data, loading } = useQuery(getTrips()?.find((e) => e.id.toString() == id));
 
   return (
     <ProductAPIContext.Provider

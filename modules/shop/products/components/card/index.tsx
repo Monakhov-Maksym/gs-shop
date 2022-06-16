@@ -9,7 +9,7 @@ import Button from '@md-ui/button/main';
 import { Wrapper, DWrapper, ButtonWrapper, Title, PreviewPhoto } from './views';
 
 interface Props {
-  img: string;
+  img: string | number;
   name: string;
   price: number;
   id: number;

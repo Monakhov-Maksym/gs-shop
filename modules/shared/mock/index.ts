@@ -2,7 +2,7 @@ export type Categories = 'PHONES' | 'NOTEBOOKS' | 'CAMERAS' | 'ALL';
 
 export interface Product {
   name: string;
-  id: number;
+  id: number | string;
   price: number;
   img: string;
   descriptions: string;
@@ -19,8 +19,7 @@ export const products: Product[] = [
     isStock: true,
     category: 'PHONES',
     name: 'Xiaomi Redmi Note 11 4/128 Gr. Gray(2201117TY)',
-    img:
-      'https://media.didi.ua/images/catalog/product_gallery/thumb/aX6z5ctsW0yZ@2x.jpg',
+    img: 'https://media.didi.ua/images/catalog/product_gallery/thumb/aX6z5ctsW0yZ@2x.jpg',
     descriptions:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus culpa dicta doloribus laborum magnam nisi, porro possimus quia quod? A accusantium deleniti doloribus est maxime minus, obcaecati saepe sapiente sit.'
   },
@@ -31,8 +30,7 @@ export const products: Product[] = [
     name: 'OnePlus 9 12/256GB Winter Mist',
     category: 'PHONES',
     price: 599,
-    img:
-      'https://media.didi.ua/images/catalog/product_gallery/thumb/xb10ALrKReqq@2x.jpg',
+    img: 'https://media.didi.ua/images/catalog/product_gallery/thumb/xb10ALrKReqq@2x.jpg',
     descriptions: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, totam.'
   },
   {

@@ -1,23 +1,30 @@
 import * as React from 'react';
+// components
 import Header from '@md-ui/headers';
-// view components
-import { ChildrenWrapper, Wrapper } from './views';
 import CartContextProvider from '@md-modules/shared/providers/cart-context';
 import CartContainer from '@md-modules/shop/cart';
 import FiltersContextProvider from '@md-modules/shared/providers/filters-context';
+// view components
+import { ChildrenWrapper, Wrapper } from './views';
 
-const MainLayout: React.FC = ({ children }) => (
-  <Wrapper>
-    <FiltersContextProvider>
-      <CartContextProvider>
-        <Header />
+interface Props {
+  hideSignInButton?: boolean;
+}
 
-        <ChildrenWrapper>{children}</ChildrenWrapper>
+const MainLayout: React.FC<Props> = ({ children, hideSignInButton }) => {
+  return (
+    <Wrapper>
+      <FiltersContextProvider>
+        <CartContextProvider>
+          <Header hideSignInButton={hideSignInButton} />
 
-        <CartContainer />
-      </CartContextProvider>
-    </FiltersContextProvider>
-  </Wrapper>
-);
+          <ChildrenWrapper>{children}</ChildrenWrapper>
+
+          <CartContainer />
+        </CartContextProvider>
+      </FiltersContextProvider>
+    </Wrapper>
+  );
+};
 
 export { MainLayout };
