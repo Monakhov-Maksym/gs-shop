@@ -46,7 +46,7 @@ const Header: React.FC<Props> = ({ hideSignInButton }) => {
   return (
     <Wrapper>
       <WHeader>
-        <Logo onClick={goToHomePage}>Anastasia Shop</Logo>
+        <Logo onClick={goToHomePage}>Shop</Logo>
 
         <SearchInput onChange={onSearch} placeholder='Search' />
 
